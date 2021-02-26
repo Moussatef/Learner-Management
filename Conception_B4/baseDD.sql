@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  25/02/2021 16:46:16                      */
+/* Date de crï¿½ation :  25/02/2021 16:46:16                      */
 /*==============================================================*/
 
 
@@ -21,6 +21,20 @@ drop table if exists PERSONE;
 drop table if exists PERSONNE_FORM;
 
 drop table if exists PRESSON_ETUD;
+
+
+
+/*==============================================================*/
+/* Table : Box_Message                                          */
+/*==============================================================*/
+create table Box_Message(
+   id_Msg int  primary key IDENTITY(1,1);
+   NOM varchar(50);
+   EMAIL varchar(50);
+   Telephon varchar(20);
+   Message varchar(max);
+   Date datetime default(getDate());
+)
 
 /*==============================================================*/
 /* Table : ADMIN                                                */
