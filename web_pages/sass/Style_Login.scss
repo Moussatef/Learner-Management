@@ -1,0 +1,121 @@
+$colorbtnconx : rgb(13, 75, 190);
+$colorWithe : #fff;
+$colorBlack : black;
+
+
+.contant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .svg_Part {
+        width: 700px;
+        margin-left: 10%;
+
+        .svg_Part svg {
+            width: 800px;
+            height: 800px;
+
+        }
+    }
+
+    .sing {
+        position: relative;
+        width: 450px;
+        height: 580px;
+        box-shadow: 15px 5px 5px 10px rgba(187, 187, 189, 0.87);
+        background-image: url(css/img/bxx.jpg);
+        background-size: cover;
+        /*background: rgba(204, 204, 204, 0.719);*/
+        padding: 50px 40px;
+        margin: 3% auto 5%;
+        text-align: center;
+
+        h1 {
+            color: $colorbtnconx;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .em {
+            border-radius: 18px;
+            padding: 14px 10px;
+            margin: 20px auto;
+            width: 300px;
+            color: rgba(51, 51, 51, 0.829);
+            transition: 0.25s;
+            border: 2px solid #717475bb;
+            outline: none;
+        }
+
+        .em:focus {
+            width: 350px;
+            border-color: $colorbtnconx;
+        }
+
+        .fb,
+        .si {
+            color: $colorWithe;
+            width: 60%;
+            height: 40px;
+            padding: 10px;
+            font-size: 15px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 2px;
+            border: 2px solid rgb(108, 99, 255);
+        }
+
+        hr {
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .or {
+            background: #f8f9fa;
+            margin: -28px auto 10px;
+            width: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $colorBlack;
+        }
+
+        .si {
+            background-color: $colorbtnconx;
+        }
+
+        .si:hover {
+            background-color: $colorWithe;
+            color: $colorBlack;
+        }
+
+        .fb {
+            background-color: rgba(59, 123, 241, 0.877);
+        }
+
+        .fb:hover {
+            background-color: $colorWithe;
+            color: $colorBlack;
+
+        }
+
+        .fb {
+            color: $colorWithe;
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .sing {
+        box-shadow: 0 0 0 0;
+    }
+
+    .svg_Part {
+        display: none;
+    }
+}

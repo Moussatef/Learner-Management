@@ -1,0 +1,82 @@
+.footer {
+	display: flex;
+	flex-flow: row wrap;
+	color: #fff;
+	background-color:rgb(108,99, 255);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.footer-section {
+	width: 22%;
+	padding-left: 30px;
+	padding-top: 30px;
+	position: relative;
+}
+.footer-section p {
+	color: rgb(233, 233, 233);
+	font-family: Arial, Helvetica, sans-serif;
+}
+.footer-section h2 {
+	font-weight: 600;
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#logo-footer {
+	width: 90%;
+}
+.footer2 {
+	position: relative;
+	top: 65px;
+}
+.footer3 {
+	position: relative;
+	top: 65px;
+}
+.footer4 {
+	position: relative;
+	top: 65px;
+}
+.footer ul {
+	list-style: none;
+}
+.footer a {
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.footer-bottom {
+	text-align: center;
+	color: rgb(233, 233, 233);
+	padding: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.boxFooter li a {
+	text-decoration: none;
+	color:rgb(233, 233, 233);
+}
+.socials {
+	padding: 5px;
+}
+
+.footer-bottom{
+    background-color: rgb(108,99, 255);
+}
+
+@media screen and (max-width : 768px)
+{
+    .footer-section {
+		width: 100%;
+	}
+	.footer3 {
+		position: relative;
+		top: 0px;
+	}
+	.footer2 {
+		position: relative;
+		top: 0px;
+	}
+	.footer4 {
+		position: relative;
+		top: 0px;
+	}
+}
+/* footer end */
