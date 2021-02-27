@@ -139,19 +139,6 @@ create table PRESSON_ETUD
 );
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 alter table CLASSE_ETD add constraint FK_CLASSE_FORMATEUR2 foreign key (ID_FORMATEUR)
       references FORMATEUR (ID_FORMATEUR) on delete restrict on update restrict;
 
