@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.teachercard {
+  margin-bottom: 20px;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+          box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+}
+
+.teachercard h2 {
+  text-align: center;
+  color: #6c63ff;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #6c63ff;
+          text-decoration-color: #6c63ff;
+}
+
+.teachercard h3 {
+  text-align: center;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #6c63ff;
+          text-decoration-color: #6c63ff;
+}
+
+.tableNote {
+  overflow: scroll;
+  height: 170px;
+}
+
+.teachercardWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.drop {
+  visibility: hidden;
+}
+
+.tableWrapperT {
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+          box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+  width: 75%;
+  margin: 20px auto;
+  border-radius: 10px;
+  min-height: 500px;
+}
+
+#formT {
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  -webkit-box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+          box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+  margin-bottom: 20px;
+}
+
+.actionsWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.actionsWrapper .mlkj {
+  width: 40%;
+  height: 470px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+          box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+}
+
+.actionsWrapper .mlkj .idsbStudents {
+  height: 30px;
+  width: 50%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  color: black;
+  -webkit-box-shadow: 0px;
+          box-shadow: 0px;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .teachercard {
+    width: 90%;
+  }
+  .drop {
+    display: none;
+  }
+  .actionsWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .actionsWrapper .mlkj {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .actionsWrapper .mlkj .tableNote {
+    width: 100%;
+  }
+  #formT {
+    width: 90%;
+  }
+  .l-navbar {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+    margin-bottom: 10px;
+    background-color: #6c63ff;
+    padding: 8px;
+    -webkit-box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+            box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+  }
+  .mobileNav div {
+    display: inline-block;
+  }
+  .mobileNav div a {
+    margin-left: 15px;
+  }
+}
+
+.sts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 75%;
+  margin: 2% auto 2%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sts .item {
+  background: #4747a1;
+  margin: 30px;
+  width: 25rem;
+  text-align: center;
+  font-size: 22px;
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(199, 199, 199, 0.87);
+          box-shadow: 5px 5px 5px 5px rgba(199, 199, 199, 0.87);
+  border: none;
+  border-radius: 15px 0 15px 0;
+}
+
+.sts .item:first-child {
+  background: #7da0fa;
+}
+
+.sts .item:last-child {
+  background: #f3797e;
+}
+
+.sts h3 {
+  color: white;
+}
+
+.sts span:last-child {
+  font-size: 80px;
+}
+/*# sourceMappingURL=teacherDash.css.map */

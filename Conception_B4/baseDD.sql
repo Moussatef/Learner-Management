@@ -43,42 +43,21 @@ create table Box_Message(
 create table ADMIN
 (
    ID_ADMIN             int not null,
-   NOM                  varchar(15),
-   EMAIL                varchar(25),
+   NOM                  varchar(50),
+   EMAIL                varchar(50),
    PASSWORD             varchar(50),
    primary key (ID_ADMIN)
 );
-
-
-
-/*==============================================================*/
-/* Table : ETUDIANT                                             */
-/*==============================================================*/
-create table ETUDIANT
-(
-   ID_ETUDIANT          int not null,
-   ID_CLASSE_ETD        int not null,
-   primary key (ID_ETUDIANT)
-);
-
-/*==============================================================*/
-/* Table : FORMATEUR                                            */
-/*==============================================================*/
-create table FORMATEUR
-(
-   ID_FORMATEUR         int not null,
-   primary key (ID_FORMATEUR)
-);
-
 /*==============================================================*/
 /* Table : CLASSE_ETD                                           */
 /*==============================================================*/
 create table CLASSE_ETD
 (
    ID_CLASSE_ETD        int not null,
-   ID_FORMATEUR         int foreign key references FORMATEUR(ID_FORMATEUR) not null,
+   ID_FORMATEUR         int  not null,
    NOM                  varchar(10),
-   primary key (ID_CLASSE_ETD,ID_FORMATEUR)
+   primary key (ID_CLASSE_ETD,ID_FORMATEUR),
+   foreign  key (ID_FORMATEUR) references PERSONNE_FORMATEUR(ID_FORMATEUR)
 );
 
 /*==============================================================*/
@@ -96,24 +75,27 @@ create table MODULE
 /*==============================================================*/
 create table NOTES
 (
-   ID_NOTE              int not null,
-   ID_FORMATEUR         int not null,
-   ID_ETUDIANT          int not null,
-   ID_MODULE            int not null,
+   ID_NOTE              int  not null,
+   ID_FORMATEUR         int  not null,
+   ID_ETUDIANT          int  not null,
+   ID_MODULE            int  not null,
    NOTE                 float,
-   primary key (ID_NOTE)
+   primary key (ID_NOTE),
+   foreign key (ID_FORMATEUR) references PERSONNE_FORMATEUR(ID_FORMATEUR) on delete cascade on update restrict , 
+   foreign key (ID_ETUDIANT)  references PRESSON_ETUD (ID_ETUDIANT) on delete cascade on update restrict,
+   foreign key (ID_MODULE)    references MODULE (ID_MODULE) on delete cascade on update restrict
 );
 
 /*==============================================================*/
 /* Table : PERSONE                                              */
 /*==============================================================*/
-create table PERSONE
+create table PERSONNE
 (
    ID_PERSON            int not null,
-   NOM                  varchar(15),
-   PRENOM               varchar(20),
+   NOM                  varchar(50),
+   PRENOM               varchar(50),
    AGE                  int,
-   EMAIL                varchar(25),
+   EMAIL                varchar(50),
    PASSWORD             varchar(50),
    primary key (ID_PERSON)
 );
@@ -121,48 +103,44 @@ create table PERSONE
 /*==============================================================*/
 /* Table : PERSONNE_FORM                                        */
 /*==============================================================*/
-create table PERSONNE_FORM
+create table PERSONNE_FORMATEUR
 (
    ID_FORMATEUR         int not null,
    ID_PERSON            int not null,
    primary key (ID_FORMATEUR, ID_PERSON)
+   foreign key (ID_PERSON) references PERSONNE (ID_PERSON) on delete cascade on update restrict;
 );
-
 /*==============================================================*/
 /* Table : PRESSON_ETUD                                         */
 /*==============================================================*/
 create table PRESSON_ETUD
 (
    ID_ETUDIANT          int not null,
-   ID_PERSON            int not null,
-   primary key (ID_ETUDIANT, ID_PERSON)
+   ID_PERSON            int  not null,
+   primary key (ID_ETUDIANT, ID_PERSON),
+   foreign key (ID_PERSON) references PERSONE (ID_PERSON) on delete cascade 
 );
 
 
 alter table CLASSE_ETD add constraint FK_CLASSE_FORMATEUR2 foreign key (ID_FORMATEUR)
-      references FORMATEUR (ID_FORMATEUR) on delete restrict on update restrict;
+      references FORMATEUR (ID_FORMATEUR) on delete cascade on update restrict;
 
 alter table ETUDIANT add constraint FK_CLASSE_ETUDIANT foreign key (ID_CLASSE_ETD)
-      references CLASSE_ETD (ID_CLASSE_ETD) on delete restrict on update restrict;
+      references CLASSE_ETD (ID_CLASSE_ETD) on delete cascade on update restrict;
 
 alter table NOTES add constraint FK_AFFECTER foreign key (ID_FORMATEUR)
-      references FORMATEUR (ID_FORMATEUR) on delete restrict on update restrict;
+      references FORMATEUR (ID_FORMATEUR) on delete cascade on update restrict;
 
 alter table NOTES add constraint FK_AFFICHER foreign key (ID_ETUDIANT)
-      references ETUDIANT (ID_ETUDIANT) on delete restrict on update restrict;
+      references ETUDIANT (ID_ETUDIANT) on delete cascade on update restrict;
 
 alter table NOTES add constraint FK_RELATION_7 foreign key (ID_MODULE)
-      references MODULE (ID_MODULE) on delete restrict on update restrict;
+      references MODULE (ID_MODULE) on delete cascade on update restrict;
 
-alter table PERSONNE_FORM add constraint FK_PERSONNE_FORM foreign key (ID_FORMATEUR)
-      references FORMATEUR (ID_FORMATEUR) on delete restrict on update restrict;
 
 alter table PERSONNE_FORM add constraint FK_PERSONNE_FORM2 foreign key (ID_PERSON)
-      references PERSONE (ID_PERSON) on delete restrict on update restrict;
-
-alter table PRESSON_ETUD add constraint FK_PRESSON_ETUD foreign key (ID_ETUDIANT)
-      references ETUDIANT (ID_ETUDIANT) on delete restrict on update restrict;
+      references PERSONE (ID_PERSON) on delete cascade on update restrict;
 
 alter table PRESSON_ETUD add constraint FK_PRESSON_ETUD2 foreign key (ID_PERSON)
-      references PERSONE (ID_PERSON) on delete restrict on update restrict;
+      references PERSONE (ID_PERSON) on delete cascade on update restrict;
 

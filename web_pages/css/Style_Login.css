@@ -16,18 +16,18 @@
 .sing {
     position:relative;
     width: 450px;
-    height: 580px;
     box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
-    background-image: url(css/img/bxx.jpg);
-    background-size:cover;
-    /*background: rgba(204, 204, 204, 0.719);*/
+    background: #fff;
     padding: 50px 40px;
     margin: 3% auto 5%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
     .sing h1 {
         color: rgb(9, 87, 231);
-        margin-bottom: 30px;
+        margin-top:5% ;
+        margin-bottom: 20%;
         border-bottom: 1px solid #e0e0e0;
     }
 .em {
@@ -78,6 +78,7 @@ hr {
 
 .si {
     background-color: rgb(13, 75, 190);
+    margin-top: 40px;
 }
 
     .si:hover {

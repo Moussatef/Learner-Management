@@ -87,8 +87,7 @@ a {
   width: 18px;
 }
 
-.header .menu-icon .navicon::before,
-.header .menu-icon .navicon:after {
+.header .menu-icon .navicon::before, .header .menu-icon .navicon:after {
   background: white;
   content: "";
   display: block;
@@ -112,7 +111,7 @@ a {
 }
 
 .pushDown {
-  height: 80px;
+  height: 60px;
   width: 100%;
 }
 

@@ -1,0 +1,96 @@
+$tittlesColor : white;
+$maincolor :rgb(108,99, 255);
+$coloraccent : rgb(233, 233, 233);
+
+.teachercard{
+    margin-bottom: 20px;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    border-radius:10px;
+    box-shadow:10px 10px 10px 5px rgba(187,187,189,0.87);
+    h2{
+        text-align: center;
+        color: $maincolor;
+        text-decoration: underline;
+        text-decoration-color: $maincolor;
+    }
+    h3{
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: $maincolor;
+    }
+}
+.teachercardWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.drop{
+    visibility: hidden;
+}
+.tableWrapperT{
+    background-color: white;
+    box-shadow: 10px 10px 10px 5px rgba(187,187,189,0.87);
+    width: 75%;
+    margin :20px auto;
+    border-radius: 10px;
+}
+
+#formT{
+    width: 40%;
+    background-color: $tittlesColor;
+    border-radius: 10px;
+    margin-left: 20px;
+	box-shadow: 10px 10px 10px 5px rgba(187,187,189,0.87);
+    margin-bottom: 20px;
+}
+.actionsWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .mlkj{
+        width: 40%;
+        height: 470px;
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px 5px rgba(187,187,189,0.87);
+        .idsStudents{
+        height: 30px;
+		width: 50%;
+		font-size: 16px;
+		border-radius: 5px;
+		border: 1px solid gray;
+        color : black;
+        }
+    }
+}
+@media screen and (max-width : 768px)
+{
+    .teachercard{
+        width: 90%;
+    }
+    .drop{
+        display: none;
+    }
+    .actionsWrapper{
+        display: flex;
+        flex-direction: column;
+        .mlkj{
+            width: 90%;
+            margin-bottom: 20px;
+            .tableNote{
+               
+                width: 100%;
+               
+                
+            }
+        }
+    }
+    #formT{
+        width: 90%;
+    }
+  
+}

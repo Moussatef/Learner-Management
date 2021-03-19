@@ -1,0 +1,136 @@
+$backgroundcolor : #f2f2f2;
+$maincolor : #6c63ff;
+$coloraccent : white;
+$default : black;
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color:$backgroundcolor;
+  }
+  
+  a {
+    color: $coloraccent;
+  }
+  
+  /* header */
+ 
+  
+  .header {
+    top: 0;
+    background-color: $maincolor;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    .menu-btn {
+        display: none;
+      }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: $maincolor;
+    }
+    .logo {
+      font-family: "Times New Roman", Times, serif;
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+        text-decoration: none;
+        margin-left: 3%;
+      }
+
+      li {
+        a {
+            display: block;
+            padding: 20px 20px;
+            text-decoration: none;
+          }
+          a:hover{
+            background-color: $backgroundcolor;
+            color: $default;
+          }
+      }
+      .menu-btn:hover{
+        background-color: $backgroundcolor;
+        color: $default;
+      }
+      .menu {
+        clear: both;
+        max-height: 0;
+        -webkit-transition: max-height 0.2s ease-out;
+        transition: max-height 0.2s ease-out;
+      }
+      .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+
+        .navicon {
+            background:$coloraccent;
+            display: block;
+            height: 2px;
+            position: relative;
+            -webkit-transition: 0.2s ease-out;
+            transition: 0.2s ease-out;
+            width: 18px;
+          }
+          .navicon::before,.navicon:after {
+            background: $coloraccent;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+            width: 100%;
+          }
+
+           .navicon:before {
+            top: 5px;
+          }
+          
+           .navicon:after {
+            top: -5px;
+          }
+      }
+      .menu-btn:checked ~ .menu {
+        max-height: 240px;
+      }
+  }
+  
+  .pushDown {
+    height: 60px;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    .header{
+        li {
+            float: left;
+
+            a {
+                padding: 20px 30px;
+              }
+          }
+        .menu-icon {
+            display: none;
+        }
+        .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+          } 
+          li {
+            clear: none;
+            float: right;
+            max-height: none;
+          }
+    }
+ 
+  }

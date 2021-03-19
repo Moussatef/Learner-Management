@@ -1,0 +1,39 @@
+
+/*===== VARIABLES CSS =====*/
+:root{
+    --header-height: 3rem;
+    --nav-width: 68px;
+
+    /*===== Colors =====*/
+    --first-color: #6C63FF;
+    --first-color-hover:#32408f;
+    --first-color-light: #c4c0d6;
+    --white-color: #F7F6FB;
+
+    /*===== Font and typography =====*/
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+  
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    // padding: 0 1rem;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s;
+}
+
+a{
+    text-decoration: none;
+}
+

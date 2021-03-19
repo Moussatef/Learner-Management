@@ -1,0 +1,169 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import 'mainroot';
+@import 'button';
+@import 'header';
+@import 'table';
+@import 'footer';
+
+  .etu-cart
+  {
+      display: flex;
+      width: 60%;
+      background-color: #ffffff;
+      align-items :center;
+      margin: 0 auto;
+      box-shadow: 10px 5px 10px 5px rgb(187, 187, 187);
+  }
+
+  .etu-cart .etu-avatar {
+      flex: 40%;
+  }
+  .etu-cart .etu-avatar img{
+      max-width: 65%;
+      margin: 10% ;
+      
+  }
+
+  .etu-cart .etu-content{
+      flex: 60%;
+  }
+
+  @media only screen and (max-width: 1040px){
+    @media screen and (max-width: 1000px) {
+        .etu-cart {
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+        .etu-avatar {
+            flex: 100%;
+        }
+      
+        .etu-avatar img {
+            max-width: 100%;
+          }
+          
+          .etu-content {
+          flex: 100%;
+        }
+      
+      }
+  }
+
+.title-sec {
+    font-size: 1.5em;
+    text-align: center;
+ 
+    margin: 100px;
+    }
+    table th{
+      text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+
+
+    form {
+      width: 60%;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #bbbbbb;
+      border-radius: 5px;
+      margin: 2% auto 2%;
+    }
+    .input-group {
+      margin: 10px 0px 10px 0px;
+      label {
+        display: block;
+        text-align: left;
+        margin: 3px;
+      }
+      input {
+        height: 40px;
+        width: 90%;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+    }
+    .btn {
+      padding: 10px;
+      font-size: 15px;
+      color: white;
+      background: #0df572;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .edit_btn {
+      cursor: pointer;
+      text-decoration: none;
+      padding: 5px 10px;
+      background: #1fdb71;
+      color: white;
+      border-radius: 3px;
+    }
+    .msg {
+      margin: 30px auto;
+      padding: 10px;
+      border-radius: 5px;
+      color: #3c763d;
+      background: #dff0d8;
+      border: 1px solid #3c763d;
+      width: 50%;
+      text-align: center;
+    }
+@media 
+only screen and (max-width: 1040px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+ 
+
+	table { 
+	  	width: 100%; 
+      caption{
+        text-align: center;
+      }
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}

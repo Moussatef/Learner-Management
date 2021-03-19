@@ -1,0 +1,154 @@
+$tittlesColor: white;
+$maincolor: rgb(108, 99, 255);
+$coloraccent: rgb(233, 233, 233);
+body {
+	margin: 0;
+	padding: 0;
+}
+.teachercard {
+	margin-bottom: 20px;
+	width: 300px;
+	height: auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+	h2 {
+		text-align: center;
+		color: $maincolor;
+		text-decoration: underline;
+		text-decoration-color: $maincolor;
+	}
+	h3 {
+		text-align: center;
+		text-decoration: underline;
+		text-decoration-color: $maincolor;
+	}
+}
+.tableNote {
+	overflow: scroll;
+	height: 170px;
+}
+.teachercardWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.drop {
+	visibility: hidden;
+}
+.tableWrapperT {
+	background-color: white;
+	box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+	width: 75%;
+	margin: 20px auto;
+	border-radius: 10px;
+	min-height: 500px;
+}
+
+#formT {
+	width: 40%;
+	background-color: $tittlesColor;
+	border-radius: 10px;
+	margin-left: 20px;
+	box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+	margin-bottom: 20px;
+}
+.actionsWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 20px;
+
+	.mlkj {
+		width: 40%;
+		height: 470px;
+		background-color: white;
+		border-radius: 10px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+		.idsbStudents {
+			height: 30px;
+			width: 50%;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			color: black;
+			box-shadow: 0px;
+		}
+	}
+}
+.mobileNav {
+	display: none;
+}
+@media screen and (max-width: 768px) {
+	.teachercard {
+		width: 90%;
+	}
+	.drop {
+		display: none;
+	}
+	.actionsWrapper {
+		display: flex;
+		flex-direction: column;
+		.mlkj {
+			width: 90%;
+			margin-bottom: 20px;
+			.tableNote {
+				width: 100%;
+			}
+		}
+	}
+	#formT {
+		width: 90%;
+	}
+	.l-navbar {
+		display: none;
+	}
+	.mobileNav {
+		display: block;
+		margin-bottom: 10px;
+		background-color: $maincolor;
+		padding: 8px;
+		box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+		div {
+			display: inline-block;
+			a {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+.sts {
+	display: flex;
+	flex-wrap: wrap;
+	width: 75%;
+	margin: 2% auto 2%;
+
+	justify-content: space-around;
+	.item {
+		background: #4747a1;
+
+		margin: 30px;
+		width: 25rem;
+		text-align: center;
+		font-size: 22px;
+		box-shadow: 5px 5px 5px 5px rgba(199, 199, 199, 0.87);
+		border: none;
+		border-radius: 15px 0 15px 0;
+	}
+	.item:first-child {
+		background: #7da0fa;
+	}
+	.item:last-child {
+		background: #f3797e;
+	}
+	h3 {
+		color: rgb(255, 255, 255);
+	}
+	span:last-child {
+		font-size: 80px;
+	}
+}

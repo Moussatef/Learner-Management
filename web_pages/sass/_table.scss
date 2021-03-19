@@ -1,0 +1,47 @@
+
+table { 
+	// width: 750px; 
+	width: 60%; 
+	border-collapse: collapse; 
+	margin:50px auto;
+    caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+        }
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background:var(--first-color);; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 16px;
+	}
+
+tr, td { 
+	text-align: center;
+	}
+
+.table-edit-icon
+{
+ cursor: pointer;
+//  text-align: center;
+}
+.table-trash-icon
+{
+cursor: pointer;
+//  text-align: center;
+}
+
+
+

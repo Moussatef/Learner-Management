@@ -1,0 +1,144 @@
+h1 {
+  text-align: center;
+  color: #0957e7;
+}
+
+.cards_contact {
+  width: 90%;
+  margin: 1% auto 1%;
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 20px 20px 20px 20px rgba(173, 173, 173, 0.61);
+  box-shadow: 25px 20px 20px 40px rgba(216, 216, 216, 0.61);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.inner_inputs {
+  margin-top: 5%;
+  margin-bottom: 20px;
+  width: 550px;
+}
+
+.atrubit {
+  margin: 20px;
+}
+
+.atrubit input, .atrubit textarea {
+  border-radius: 18px;
+  padding: 14px 10px;
+  margin: 20px auto;
+  width: 300px;
+  color: rgba(51, 51, 51, 0.829);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border: 2px solid #717475bb;
+  outline: none;
+  -webkit-box-shadow: 15px 10px 16px -2px rgba(173, 173, 173, 0.61);
+  box-shadow: 15px 10px 16px -2px rgba(216, 216, 216, 0.61);
+}
+
+.atrubit label {
+  font-size: 18px;
+}
+
+.atrubit input[type=text]:focus, .atrubit input[type=email]:focus, .atrubit textarea:focus {
+  width: 320px;
+  border-color: #068fff;
+}
+
+.inner_inputs .btn_env {
+  background-color: #0d4bbe;
+  color: #fff;
+  width: 320px;
+  height: 40px;
+  padding: 10px;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+  border: 2px solid #6c63ff;
+}
+
+.inner_inputs .btn_env:hover {
+  background-color: white;
+  color: black;
+}
+
+.svg_Part {
+  width: 700px;
+}
+
+.svg_Part svg {
+  width: 600px;
+  height: 800px;
+}
+
+.svg_top {
+  width: 50%;
+  margin: 2% auto 2%;
+}
+
+.svg_btm {
+  width: 50%;
+  margin: 2% auto 2%;
+  overflow: hidden;
+}
+
+.svg_top svg {
+  width: 100%;
+  height: 300px;
+  display: none;
+}
+
+.svg_btm svg {
+  width: 60%;
+  margin: 1% 20% 1%;
+}
+
+@media (max-width: 600px) {
+  .cards_contact {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .inner_inputs .btn_env {
+    width: 200px;
+  }
+  .sing {
+    -webkit-box-shadow: 0 0 0 0;
+            box-shadow: 0 0 0 0;
+  }
+  .svg_Part {
+    display: none;
+  }
+  .inner_inputs {
+    margin-top: 1%;
+    width: 80%;
+  }
+  .atrubit input, .atrubit textarea {
+    border-radius: 18px;
+    padding: 14px 10px;
+    margin: 20px auto;
+    width: 300px;
+    color: rgba(51, 51, 51, 0.829);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    border: 2px solid #717475bb;
+    outline: none;
+    -webkit-box-shadow: 15px 10px 16px -2px rgba(173, 173, 173, 0.61);
+    box-shadow: 15px 10px 16px -2px rgba(216, 216, 216, 0.61);
+  }
+}
+/*# sourceMappingURL=contactStyle.css.map */

@@ -1,0 +1,204 @@
+$backgroundcolor : #f2f2f2;
+$coloraccent:white;
+$defaultcolor : black;
+
+
+.container{
+    width: 90%;
+    display: flex;
+    margin :  auto;
+    flex-direction: row;
+    align-items: center;
+    background-color: $coloraccent;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 10px 10px 10px 5px rgba(187,187,189,0.87);
+
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+
+        img{
+            height: 400px;
+        }
+    }
+
+    .box1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            text-align: center;
+        }
+
+        h1{
+            text-align: center; 
+        }
+        .buttonHome{
+            border: none;
+            padding: auto;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.5s;
+            cursor: pointer;
+            background-color:  rgb(108,99, 255);
+            color: $coloraccent; 
+            border-radius: 2px;
+            border: 2px solid rgb(108,99, 255);
+          }
+          .buttonHome:hover {
+            background-color: rgb(242, 242,242);
+            color: $defaultcolor;
+          }
+    }
+
+    .box2{
+        width: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+}
+.sebarator{
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    height: 80px;
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.wrapperCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    .containerA {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        background-color:$coloraccent;
+        box-shadow: 10px 10px 10px 5px rgba(187,187,189,0.87);
+        margin: 20px;
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform .5s;
+          }
+          .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: $coloraccent;
+            overflow: hidden;
+            width: 100%;
+            height:0;
+            transition: .5s ease;
+          }
+          .text {
+            color: $defaultcolor;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            transform: translate(-40%, -40%);
+            text-align: left;
+          }
+      }
+}
+  .containerA:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  .containerA:hover img{
+      transform: translateY(200px);
+  }
+
+
+
+  .sts{
+      display: flex;
+      flex-wrap: wrap;
+      width: 75%;
+      margin: 2% auto 2%;
+      justify-content: space-around;
+      .item{
+        background: #4747A1;
+          margin: 30px;
+          width: 25rem;
+          text-align: center;
+          font-size: 22px;
+          box-shadow: 5px 5px 5px 5px rgba(199, 199, 199, 0.87);
+          border: none;
+          border-radius: 15px 0 15px 0;
+      }
+      .item:first-child{
+          background: #7DA0FA;
+    }
+    .item:last-child{
+          background: #F3797E;
+      }
+      h3{
+        color: rgb(255, 255, 255);
+      }
+      span:last-child{
+          font-size: 80px;
+
+      }
+  }
+ 
+  @media screen and (max-width: 768px)
+  {
+    .text {
+       margin: 0;
+       padding: 0;
+       font-size: 15px;
+      }
+    .sebarator{
+        height: 110px;
+    }
+    .dontextSchool{
+        .block{
+            width: 90%;
+        }
+    }
+    .container{
+        flex-direction: column;
+
+        .box{
+            padding: 0;
+            margin-bottom: 10px;
+
+            img{
+                width: 100%; 
+                height: auto; 
+            }
+        } 
+        .box2{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+        }
+    }
+ 
+  }
